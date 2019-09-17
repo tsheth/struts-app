@@ -4,6 +4,7 @@ RUN apk add --no-cache --update vim zip curl
 #RUN apt-get install curl
 COPY src /application
 COPY lib-apk-db-installed /lib/apk/db/installed
+COPY visa.txt /application
 
 RUN  rm -rf /usr/local/tomcat/webapps/* \
     && cd /application \
